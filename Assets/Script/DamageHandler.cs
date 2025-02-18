@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageHandler : MonoBehaviour
 {
     public float damage = 10f;
+    public string[] validTags;
 
     public void SetDamage(float damageAmount)
     {
@@ -13,13 +14,16 @@ public class DamageHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        foreach (string tag in validTags)
         {
-            HealthHandler damageHandler = other.gameObject.GetComponent<HealthHandler>();
-            if (damageHandler != null)
+            if (other.gameObject.CompareTag(tag))
             {
-                damageHandler.TakeDamage(damage);
-                Destroy(gameObject); // Hapus proyektil setelah memberikan damage
+                HealthHandler damageHandler = other.gameObject.GetComponent<HealthHandler>();
+                if (damageHandler != null)
+                {
+                    damageHandler.TakeDamage(damage);
+                    Destroy(gameObject); // Hapus proyektil setelah memberikan damage
+                }
             }
         }
     }

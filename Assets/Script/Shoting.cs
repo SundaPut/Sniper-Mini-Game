@@ -41,7 +41,7 @@ public class Shoting : MonoBehaviour
 
     void Update()
     {
-        cooldownTimer += Time.deltaTime; // Tambahkan waktu ke cooldown timer
+        cooldownTimer += Time.deltaTime;
 
         if (cooldownTimer >= attackCooldown)
         {
@@ -76,20 +76,9 @@ public class Shoting : MonoBehaviour
             rb.AddForce(shootPoint.forward * shootForce);
         }
 
-        yield return new WaitForSeconds(spawnDelay);
+        Destroy(projectileInstance, destroyDelay);
 
-        // Menggunakan raycasting untuk mendeteksi tabrakan
-        RaycastHit hit;
-        if (Physics.Raycast(shootPoint.position, shootPoint.forward, out hit, Mathf.Infinity))
-        {
-            if (hit.collider.CompareTag("Enemy"))
-            {
-                Destroy(projectileInstance, destroyDelay);
-            }
-
-            // Panggil event menembak
-            OnShooting.Invoke();
-        }
+        OnShooting.Invoke();
     }
     void OnDisable()
     {

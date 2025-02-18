@@ -17,6 +17,13 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
     }
 
+    public void DecreaseScore()
+    {
+        score--;
+        UpdateScoreText();
+
+    }
+
     private void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;

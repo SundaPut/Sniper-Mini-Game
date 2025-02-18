@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("Health Settings")]
     [SerializeField] private float startingHealth = 100f;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private GameObject takeDamage;
+    [SerializeField] private GameObject die;
     public float currentHealth { get; private set; }
     public bool IsDead { get; private set; }
 
@@ -15,10 +17,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth;
         IsDead = false;
         UpdateHealthSlider();
-    }
-    private void Start()
-    {
-        
     }
 
     public void TakeDamage(float damage)
@@ -30,12 +28,13 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth > 0)
         {
-
+            takeDamage.SetActive(true);
+            takeDamage.SetActive(false);
         }
         else
         {
             IsDead = true;
-            Destroy(gameObject);
+            die.SetActive(true);
         }
     }
 
@@ -53,4 +52,4 @@ public class PlayerHealth : MonoBehaviour
             healthBar.value = currentHealth / startingHealth;
         }
     }
-  }
+ }
