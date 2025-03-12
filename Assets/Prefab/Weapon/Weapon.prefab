@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1707119615849982243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5930599881745040816}
+  - component: {fileID: 2883143352140271688}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5930599881745040816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707119615849982243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.57, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2883143352140271688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707119615849982243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29150f23e46fd3f478e60152d80f1f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunModel:
+  - {fileID: 659507819518341212, guid: bb7ccbdaacbf2914ea1922ba2ccf6ae0, type: 3}
+  - {fileID: 7696757222084637594, guid: 86d9a4d9d979090469b7c81a484d38e8, type: 3}
+  - {fileID: 2611047038246114927, guid: 54a778390ad11cc4893dacfce0080099, type: 3}
+  - {fileID: 6440883214859763022, guid: af545c10fcd69f84d88047e0515b638b, type: 3}
+  - {fileID: 969497046075339661, guid: 53a5207a0956bc84abad3916972198eb, type: 3}
+  - {fileID: 8106503711345257949, guid: a54852619bfc8ae4b8f86dee83ef9ef0, type: 3}
+  - {fileID: 7644957354760337933, guid: 48bff7279741b634698f53d05a0477e4, type: 3}
+  - {fileID: 1318526802073469517, guid: ab02f69def69c4647ac0c1552cad1858, type: 3}
+  - {fileID: 1713264109036778969, guid: 2af948b833e32bb478018c2f927e348a, type: 3}
+  - {fileID: 4247118223238895524, guid: 943c345be0423ed47908380e38dfe185, type: 3}
+  spawnPosition:
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -1.3, y: 2.0894287, z: -0.87257147}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -1.3, y: 2.0894287, z: -0.87257147}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  - {x: -0.5, y: 2.0894287, z: -1.4}
+  spawnRotation:
+  - {x: -90, y: 0, z: 320}
+  - {x: -90, y: 0, z: 320}
+  - {x: -90, y: 0, z: 320}
+  - {x: -90, y: 0, z: 320}
+  - {x: 0, y: -130, z: 90}
+  - {x: 0, y: 320, z: 0}
+  - {x: 0, y: 320, z: 0}
+  - {x: -90, y: 0, z: 320}
+  - {x: -90, y: 0, z: 320}
+  - {x: 0, y: 320, z: 0}
