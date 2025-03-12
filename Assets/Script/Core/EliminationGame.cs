@@ -29,6 +29,13 @@ public class EliminationGame : MonoBehaviour
     public void EnemyEliminated()
     {
         eliminatedEnemies++;
+        UpdateTargetText();
+    }
+
+    private void UpdateTargetText()
+    {
+        int remainingEnemies = targetEnemies - eliminatedEnemies;
+        enemyTarget.text = "Target: " + remainingEnemies.ToString();
     }
 
     private void CheckWinCondition()

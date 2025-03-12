@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     private EliminationGame elimGame;
     private ScoreGame scrGame;
     private ObjectiveGame objectiveGame;
+    private SaveNpcGame saveNpcGame;
 
     private SpawnEnemy spawn;
 
@@ -23,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
         scrGame = FindFirstObjectByType<ScoreGame>();
         spawn = FindFirstObjectByType<SpawnEnemy>();
         objectiveGame = FindFirstObjectByType<ObjectiveGame>();
-
+        saveNpcGame = FindFirstObjectByType<SaveNpcGame>();
     }
     public void ReceiveDamage(int damageAmount)
     {
@@ -34,6 +35,9 @@ public class EnemyHealth : MonoBehaviour
 
             // panggil EnemyEliminated
             if (elimGame != null)  elimGame.EnemyEliminated();
+
+            // panggil SaveNpcGame
+            if (saveNpcGame != null)  saveNpcGame.EnemyEliminated();
 
             // panggil IncreaseScore
             if (scrGame != null) scrGame.IncreaseScore();

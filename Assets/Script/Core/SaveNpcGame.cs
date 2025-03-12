@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class SaveNpcGame : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class SaveNpcGame : MonoBehaviour
         timeRemaining = time;
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        enemyTarget.text = "Target: " + targetEnemies.ToString();
 
         StartCoroutine(GameTimer());
         Time.timeScale = 1;
@@ -46,12 +48,22 @@ public class SaveNpcGame : MonoBehaviour
             VisibleCursor();
         }
 
-        if (eliminatedEnemies == targetEnemies && npc != null)
+        if (eliminatedEnemies >= targetEnemies && npc != null)
         {
             winPanel.SetActive(true);
             Time.timeScale = 0;
             VisibleCursor();
         }
+    }
+    public void EnemyEliminated()
+    {
+        eliminatedEnemies++;
+        UpdateTargetText();
+    }
+    private void UpdateTargetText()
+    {
+        int remainingEnemies = targetEnemies - eliminatedEnemies;
+        enemyTarget.text = "Target: " + remainingEnemies.ToString();
     }
 
     private void VisibleCursor()

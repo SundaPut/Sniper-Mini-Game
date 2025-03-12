@@ -7200,8 +7200,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279369472
-  m_fontColor: {r: 0, g: 1, b: 0.06752968, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21992,9 +21992,9 @@ MonoBehaviour:
   npc: {fileID: 8306115927351333217}
   time: 60
   timerText: {fileID: 811108539}
-  enemyTarget: {fileID: 0}
+  enemyTarget: {fileID: 165033133}
   targetEnemies: 4
-  eliminatedEnemies: 4
+  eliminatedEnemies: 0
   winPanel: {fileID: 343676263}
   losePanel: {fileID: 1220074660}
 --- !u!43 &591665266
